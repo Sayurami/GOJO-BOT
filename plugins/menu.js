@@ -39,7 +39,6 @@ cmd(
     }
   ) => {
     try {
-      const config = await readEnv();
       let menu = {
         main: "",
         download: "",
@@ -63,23 +62,23 @@ cmd(
 | *MAIN COMMANDS* |
     ▫️.alive
     ▫️.menu
-    ▫️.ai <text>
-    ▫️.system
-    ▫️.owner
+    ▫️
+    ▫️
+    ▫️
 | *DOWNLOAD COMMANDS* |
-    ▫️.song <text>
-    ▫️.video <text>
-    ▫️.fb <link>
+    ▫️
+    ▫️
+    ▫️
 | *GROUP COMMANDS* |
 ${menu.group}
 | *OWNER COMMANDS* |
     ▫️.restart
     ▫️.update
 | *CONVERT COMMANDS* |
-    ▫️.sticker <reply img>
-    ▫️.img <reply sticker>
-    ▫️.tr <lang><text>
-    ▫️.tts <text>
+    ▫️
+    ▫️
+    ▫️
+    ▫️
 | *SEARCH COMMANDS* |
 ${menu.search}
 
