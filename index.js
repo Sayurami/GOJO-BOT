@@ -61,7 +61,7 @@ async function connectToWA() {
   const prefix = config.PREFIX;
   //===========================
 
-  console.log("Connecting Gojo💀);
+  console.log("Connecting Gojo max);
   const { state, saveCreds } = await useMultiFileAuthState(
     __dirname + "/auth_info_baileys/"
   );
@@ -92,10 +92,10 @@ async function connectToWA() {
           require("./plugins/" + plugin);
         }
       });
-      console.log("Gojo💀 installed successful ✅");
-      console.log("Gojo💀 connected to whatsapp ✅");
+      console.log("Gojo max installed successful ✅");
+      console.log("Gojo max connected to whatsapp ✅");
 
-      let up = `Gojo💀 connected successful ✅`;
+      let up = `Gojo max connected successful ✅`;
       let up1 = `Hello Gojo, I made bot successful`;
 
       robin.sendMessage(ownerNumber + "@s.whatsapp.net", {
@@ -395,7 +395,7 @@ async function connectToWA() {
   });
 }
 app.get("/", (req, res) => {
-  res.send("hey, Gojo💀 started✅");
+  res.send("hey, Gojo max started✅");
 });
 app.listen(port, () =>
   console.log(`Server listening on port http://localhost:${port}`)
