@@ -424,7 +424,7 @@ cmd({
 cmd({
     pattern: "img",
     alias: ["pinterest", "image", "searchpin"],
-    react: "🚀",
+    react: "📷",
     desc: "Search and download Pinterest images using the API.",
     category: "fun",
     use: ".pin <keywords>",
