@@ -6,6 +6,7 @@ function convertToBool(text, fault = "true") {
 }
 
 module.exports = {
+  // Session config
   SESSION_ID: process.env.SESSION_ID || "XUMBhBaK#BeztE3lhogCpPSBxTODTf9zVqXc4COnjRpw0mgqQF8c",
 
   // Owner settings
@@ -31,5 +32,6 @@ module.exports = {
   // Developer mode
   DEBUG_MODE: convertToBool(process.env.DEBUG_MODE, "false"),
 
-
+  // MongoDB URL
+  MONGO_URL: process.env.MONGO_URL || "", // Add your MongoDB connection string in config.env
 };
