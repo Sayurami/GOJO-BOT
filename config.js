@@ -32,5 +32,5 @@ module.exports = {
   DEBUG_MODE: convertToBool(process.env.DEBUG_MODE, "false"),
 
   // ChatGPT API Key
-  OPENAI_API_KEY: process.env.OPENAI_API_KEY || "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",
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY || "",
 };
