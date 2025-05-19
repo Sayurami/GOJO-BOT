@@ -26,6 +26,10 @@
     "api-dylux": "^1.8.5",
     "mongoose": "^8.15.0",
     "fb-downloader-scrapper": "^3.0.1",
+    "cheerio": "^1.0.0-rc.12",
+    "@dark-yasiya/yt-dl.js": "1.0.5",
+    "@mrnima/tiktok-downloader":"1.0.0",
+    "@mrnima/facebook-downloader":"1.0.0",
     "canvas": "^3.1.0",
     "youtubedl-core": "^4.11.7"
   }
