@@ -7,6 +7,7 @@ const {
   fetchLatestBaileysVersion,
   Browsers,
 } = require("@whiskeysockets/baileys");
+
 const fs = require("fs");
 const P = require("pino");
 const qrcode = require("qrcode-terminal");
@@ -100,6 +101,7 @@ async function connectToWA() {
     const m = sms(robin, mek);
     const type = getContentType(mek.message);
     const from = mek.key.remoteJid;
+
     const body =
       type === "conversation"
         ? mek.message.conversation
@@ -119,6 +121,7 @@ async function connectToWA() {
     const sender = mek.key.fromMe
       ? robin.user.id.split(":")[0] + "@s.whatsapp.net"
       : mek.key.participant || mek.key.remoteJid;
+
     const senderNumber = sender.split("@")[0];
     const botNumber = robin.user.id.split(":")[0];
     const pushname = mek.pushName || "User";
@@ -139,6 +142,8 @@ async function connectToWA() {
 
     robin.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
       let mime = (await axios.head(url)).headers["content-type"];
+      const type = mime.split("/")[0];
+
       if (mime.split("/")[1] === "gif") {
         return robin.sendMessage(
           jid,
@@ -147,7 +152,6 @@ async function connectToWA() {
         );
       }
 
-      const type = mime.split("/")[0];
       if (mime === "application/pdf") {
         return robin.sendMessage(
           jid,
@@ -159,9 +163,11 @@ async function connectToWA() {
       if (type === "image") {
         return robin.sendMessage(jid, { image: await getBuffer(url), caption, ...options }, { quoted, ...options });
       }
+
       if (type === "video") {
         return robin.sendMessage(jid, { video: await getBuffer(url), caption, mimetype: "video/mp4", ...options }, { quoted, ...options });
       }
+
       if (type === "audio") {
         return robin.sendMessage(jid, { audio: await getBuffer(url), caption, mimetype: "audio/mpeg", ...options }, { quoted, ...options });
       }
@@ -180,6 +186,7 @@ async function connectToWA() {
       const cmd =
         events.commands.find((cmd) => cmd.pattern === cmdName) ||
         events.commands.find((cmd) => cmd.alias?.includes(cmdName));
+
       if (cmd) {
         if (cmd.react) {
           robin.sendMessage(from, { react: { text: cmd.react, key: mek.key } });
