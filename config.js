@@ -33,5 +33,5 @@ module.exports = {
   DEBUG_MODE: convertToBool(process.env.DEBUG_MODE, "false"),
 
   // MongoDB URL
-  MONGO_URL: process.env.MONGO_URL || "", // Add your MongoDB connection string in config.env
+  MONGO_URL: process.env.MONGO_URL || "mongodb://mongo:VZxyGSYHVScPOgzxZBZBHPVqSrJqETkw@switchback.proxy.rlwy.net:22850", // Add your MongoDB connection string in config.env
 };
