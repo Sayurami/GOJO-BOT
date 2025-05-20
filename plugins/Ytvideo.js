@@ -5,7 +5,7 @@ const { ytmp4 } = require("youtube-dl-exec");
 cmd(
   {
     pattern: "video",
-    alias:["Ytv"],
+    alias:["ytv"],
     react: "📮",
     desc: "Download video",
     category: "download",
