@@ -62,13 +62,14 @@ cmd(
 | *MAIN COMMANDS* |
     ▫️.alive
     ▫️.menu
-    ▫️
+    ▫️.ping
     ▫️
     ▫️
 | *DOWNLOAD COMMANDS* |
-    ▫️
-    ▫️
-    ▫️
+    ▫️.yt
+    ▫️.fb
+    ▫️.gdrive
+    ■.tiktok
 | *GROUP COMMANDS* |
 ${menu.group}
 | *OWNER COMMANDS* |
