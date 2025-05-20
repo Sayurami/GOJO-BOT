@@ -1,4 +1,3 @@
-const { readEnv } = require('../lib/database');
 const { cmd } = require('../command');
 
 cmd({
@@ -12,12 +11,10 @@ cmd({
     from, reply
 }) => {
     try {
-        const config = await readEnv();
-
         // Send image + caption
         await gojo.sendMessage(from, {
-            image: { url: config.ALIVE_IMG=https://raw.githubusercontent.com/Gojo899/Bot-photo-and-video-/refs/heads/main/Photo/file_00000000d0dc61f597f450261ecfe33f%20(1).png },
-            caption: config.ALIVE_MSG=⚡ GOJO MAX is ALIVE ⚡\n\nSystem Status: ONLINE ✅\nBot Power Level: ∞\n\nCreated & Managed by: sayura\n\nType .menu to explore commands!
+            image: { url: "https://raw.githubusercontent.com/Gojo899/Bot-photo-and-video-/refs/heads/main/Photo/file_00000000d0dc61f597f450261ecfe33f%20(1).png" },
+            caption: `⚡ GOJO MAX is ALIVE ⚡\n\nSystem Status: ONLINE ✅\nBot Power Level: ∞\n\nCreated & Managed by: sayura\n\nType .menu to explore commands!`
         }, { quoted: mek });
 
         // Send voice message (PTT style)
