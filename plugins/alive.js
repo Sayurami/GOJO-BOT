@@ -19,8 +19,8 @@ cmd({
 
         // Send image + caption
         await robin.sendMessage(from, {
-            image: { url: config.ALIVE_IMG },
-            caption: config.ALIVE_MSG
+            image: { url: "https://raw.githubusercontent.com/Gojo899/Bot-photo-and-video-/refs/heads/main/Photo/file_00000000d0dc61f597f450261ecfe33f%20(1).png" },
+            caption: 
         }, { quoted: mek });
 
         // Send voice message (PTT style)
