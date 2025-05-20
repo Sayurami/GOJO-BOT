@@ -1,14 +1,6 @@
 const { cmd, commands } = require('../command');
 const config = require('../config');
 
-// readEnv function එක
-const readEnv = () => {
-    return {
-        ALIVE_IMG: process.env.ALIVE_IMG || "https://example.com/default.jpg",
-        ALIVE_MSG: process.env.ALIVE_MSG || "Hey! Bot එක ඔන්ලයින් එකයි!"
-    };
-};
-
 cmd({
     pattern: "alive",
     alias: ["bot", "robot"],
@@ -24,11 +16,12 @@ async (robin, mek, m, {
     groupAdmins, isBotAdmins, isAdmins, reply
 }) => {
     try {
-        const config = readEnv(); // async කරන්න අවශ්‍ය නැහැ
+        const ALIVE_IMG = process.env.ALIVE_IMG || "https://example.com/default.jpg";
+        const ALIVE_MSG = process.env.ALIVE_MSG || "Hey! Bot එක ඔන්ලයින් එකයි!";
 
         await robin.sendMessage(from, {
-            image: { url: config.ALIVE_IMG },
-            caption: config.ALIVE_MSG
+            image: { url: ALIVE_IMG },
+            caption: ALIVE_MSG
         }, { quoted: mek });
 
         await robin.sendMessage(from, {
