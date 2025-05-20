@@ -11,7 +11,7 @@ cmd({
     pattern: "tiktok",
     alias: ["tt2", "tiktokdl2", "ttdown2", "tiktokvid2", "ttdl2"],    desc: "Download TikTok videos or audio by link.",
     category: "downloader",
-    react: "🎵",
+    react: "♨️",
     filename: __filename
 }, async (conn, mek, m, { args, reply, isQuoted }) => {
     try {
@@ -102,6 +102,7 @@ cmd({
 cmd({
   pattern: "twitter",
   alias: ["tweet", "twdl"],
+  react:"🐻",
   desc: "Download Twitter videos",
   category: "download",
   filename: __filename
@@ -276,6 +277,7 @@ cmd({
 
 cmd({
   pattern: "apk",
+  react:"🎰",
   desc: "Download APK from Aptoide.",
   category: "download",
   filename: __filename
