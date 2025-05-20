@@ -33,6 +33,7 @@
     "@dark-yasiya/yt-dl.js": "1.0.5",
     "@mrnima/tiktok-downloader":"1.0.0",
     "@mrnima/facebook-downloader":"1.0.0",
+    "youtube-dl-exec":"3.0.21",
     "canvas": "^3.1.0",
     "@vreden/youtube_scraper": "^1.2.7"
   }
