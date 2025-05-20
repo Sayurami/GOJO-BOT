@@ -23,9 +23,9 @@ cmd({
             caption: config.ALIVE_MSG
         }, { quoted: mek });
 
-        // Send voice (ptt: true for voice note style)
+        // Send voice message (PTT style)
         await robin.sendMessage(from, {
-            audio: { url: config.ALIVE_VOICE }, // must be a valid mp3/ogg file or file path/url
+            audio: { url: "https://github.com/Gojo899/Bot-photo-and-video-/raw/refs/heads/main/mp3/1747630063493150813rf60n6vl-voicemaker.in-speech.mp3" },
             mimetype: 'audio/mpeg',
             ptt: true
         }, { quoted: mek });
