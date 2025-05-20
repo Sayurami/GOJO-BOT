@@ -3,7 +3,7 @@ const { cmd } = require('../command');
 cmd({
     pattern: "alive",
     alias: "bot",
-    react: "⚡",
+    react: "👻",
     desc: "Check if Gojo bot is online.",
     category: "main",
     filename: __filename
